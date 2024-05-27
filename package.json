@@ -3,17 +3,17 @@
   "version": "1.0.0",
   "description": "Display Valorant Esports league schedules on your magic mirror.",
   "main": "MMM-VALORANTESPORTS-SCHEDULES.js",
-  "repository": "",
+  "repository": "https://github.com/xadamxk/MMM-VALORANTESPORTS-SCHEDULES",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/xadamxk/MMM-VALORANTESPORTS-SCHEDULES/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/xadamxk/MMM-VALORANTESPORTS-SCHEDULES",
   "keywords": [
     "magic mirror",
     "module",
     "esports",
     "valorant"
   ],
-  "author": "xadamxk <xadamxk@gmail.com>",
+  "author": "xadamxk",
   "license": "MIT"
 }
