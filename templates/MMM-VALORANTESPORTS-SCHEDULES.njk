@@ -1,20 +1,86 @@
-<table class='MMM-VALORANTESPORTS-SCHEDULES-table'>
-    <tbody>
-        {% if items.length === 0 %}
-        <tr>
-            <td>{{ 'NO_DATA_FOUND' | translate }}</td>
-        </tr>
-    {% else %}
-        <tr class="MMM-VALORANTESPORTS-SCHEDULES-table-heading">
-            <td>Brand</td>
-            <td>Item</td>
-        </tr>
-        {% for item in items %}
-        <tr class="MMM-VALORANTESPORTS-SCHEDULES-table-row">
-            <td>{{item.brand}}</td>
-            <td>{{item.equipment}}</td>
-        </tr>
-        {% endfor %}
+<table class="valorantesportSchedulesLeagueTable">
+  {% if groupedSchedules.length === 0 %}
+    <tr>
+      <td>{{ 'NO_SCHEDULES_FOUND' | translate }}</td>
+    </tr>
+  {% else %}
+    {% for schedules in groupedSchedules %}
+      {% for schedule in schedules %}
+        {% if schedule.type === 'match' %}
+          {% if loop.index0 === 0 %}
+            <tr class="valorantesportSchedulesLeagueRow">
+              <td colspan="100%">
+                <span class="valorantesportSchedulesFloatLeft">
+                  <span class="valorantesportSchedulesBold">{{schedule.startDayOfWeek}}</span>
+                  –
+                  <span>{{schedule.startMonth}}</span>
+                  <span>{{schedule.startDayOfMonth}}</span>
+                </span>
+                {% if config.showTournamentBlock %}
+                  <span class="valorantesportSchedulesFloatRight">{{schedule.blockName}}</span>
+                {% endif %}
+              </td>
+            </tr>
+          {% endif %}
+          <tr class="valorantesportSchedulesLeagueRow">
+            <td class="valorantesportSchedulesSides">
+              <div class="valorantesportSchedulesTime">
+                {% if schedule["isLive"] %}
+                  <div class="valorantesportSchedulesLiveLabel">{{ 'LIVE' | translate }}</div>
+                {% else %}
+                  {% if config.use24HourTime %}
+                    <span>{{ schedule["startHour"] }}:00</span>
+                  {% else %}
+                    <span>{{ schedule["startHour"] }}</span>
+                  {% endif %}
+                  {% if config.showPeriodLabel %}
+                    <div class="valorantesportSchedulesPeriod">
+                      {{ schedule["startPeriod"] }}
+                    </div>
+                  {% endif %}
+                {% endif %}
+              </div>
+            </td>
+            {% if config.showTeamLabel %}
+              <td>
+                {% if config.useTeamFullName %}
+                  <div class="valorantesportSchedulesTeam1">{{ schedule.match.teams[0].name }}</div>
+                {% else %}
+                  <div class="valorantesportSchedulesTeam1">{{ schedule.match.teams[0].code }}</div>
+                {% endif %}
+              </td>
+            {% endif %}
+            <td class="valorantesportSchedulesLogo">
+              <img class="valorantesportSchedulesLogo" src="{{ schedule.match.teams[0].image }}"/>
+            </td>
+            <td class="valorantesportSchedulesVsContainer">
+              <span class="valorantesportSchedulesVs">VS</span>
+            </td>
+            <td>
+              <img class="valorantesportSchedulesLogo" src="{{ schedule.match.teams[1].image }}"/>
+            </td>
+            {% if config.showTeamLabel %}
+              <td>
+                {% if config.useTeamFullName %}
+                  <div class="valorantesportSchedulesTeam2">{{ schedule.match.teams[1].name }}</div>
+                {% else %}
+                  <div class="valorantesportSchedulesTeam2">{{ schedule.match.teams[1].code }}</div>
+                {% endif %}
+              </td>
+            {% endif %}
+            {% if config.showRegionAndBestOf %}
+              <td class="valorantesportSchedulesSides">
+                <div class="valorantesportSchedulesLeagueInfo">{{ schedule.league.name }}</div>
+                <div class="valorantesportSchedulesLeagueInfo">
+                  {{ 'BEST_OF' | translate }}
+                  {{ schedule.match.strategy.count }}
+                </div>
+              </td>
+            {% endif %}
+            <td></td>
+          </tr>
         {% endif %}
-    </tbody>
+      {% endfor %}
+    {% endfor %}
+  {% endif %}
 </table>

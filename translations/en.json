@@ -1,5 +1,6 @@
 {
     "ERROR": "Error",
     "SUCCESS": "Success",
-    "NO_DATA_FOUND": "No data found"
+    "NO_DATA_FOUND": "No data found",
+    "BEST_OF": "BEST OF"
 }

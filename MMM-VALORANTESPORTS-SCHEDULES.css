@@ -8,16 +8,81 @@
  * Styles:
  */
 
- .MMM-VALORANTESPORTS-SCHEDULES-table {
-    color: white;
+ .valorantesportSchedulesLeagueTable {
+   color: white
+ }
+ 
+ .valorantesportSchedulesLeagueRow {
+   height: 36px;
+ }
+ 
+ .valorantesportSchedulesTime {
+   font-size: 36px;
+   font-weight: bold;
+ }
+ 
+ .valorantesportSchedulesPeriod {
+   font-size: 12px;
+   font-weight: bold;
+   text-align: left;
+   display: inline-block;
+ }
+ 
+ .valorantesportSchedulesTeam1 {
+   text-align: right;
+   font-size: 28px;
+ }
+ 
+ .valorantesportSchedulesTeam2 {
+   text-align: left;
+   font-size: 28px;
+ }
+ 
+ .valorantesportSchedulesLogo {
+   margin-top: 5px;
+   height: 50px;
+   width: 50px;
  }
 
- .MMM-VALORANTESPORTS-SCHEDULES-table-heading {
-   height: 36px;
-   font-size: 36px;
-}
-
-.MMM-VALORANTESPORTS-SCHEDULES-table-row {
-   height: 24px;
-   font-size: 24px
-}
+ .valorantesportSchedulesVsContainer {
+   width: 1px;
+   white-space: nowrap;
+ }
+ 
+ .valorantesportSchedulesVs {
+   align-items: center;
+   padding-left: 8px;
+   padding-right: 8px;
+   justify-content: center;
+   color: #8fa3b0;
+   font-size: 18px;
+   font-weight: bold;
+ }
+ 
+ .valorantesportSchedulesLeagueInfo {
+   white-space: nowrap;
+   color: #8fa3b0;
+   font-size: 14px;
+   font-weight: bold;
+   text-align: right;
+ }
+ 
+ .valorantesportSchedulesSides {
+   width: 20%;
+ }
+ 
+ .valorantesportSchedulesBold {
+   font-weight: bold;
+ }
+ 
+ .valorantesportSchedulesFloatRight {
+   float: right;
+ }
+ 
+ .valorantesportSchedulesFloatLeft {
+   float: left;
+ }
+ 
+ .valorantesportSchedulesLiveLabel {
+   color: #de2f2f
+ }
