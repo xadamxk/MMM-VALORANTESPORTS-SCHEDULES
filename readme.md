@@ -74,7 +74,7 @@ modules: [
 | --- | --- | --- | --- |
 | `updateInterval` | integer | 60 | Number of minutes to poll api for updates. |
 | `apiKey` | string | '0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z' | Api key used to query esports API - all users' api key is the default key. |
-| `leagueIds` | array | ["109974795266458277"] | Array of league ids to get esport standings. Currently the API only supports a single league id. If no id is provided, then all region games will be provided. Refer to league table below for ids of other leagues. Defaults to TBD.|
+| `leagueIds` | array | ["109974795266458277"] | Array of league ids to get esport standings. Currently the API only supports a single league id. If no id is provided, then all region games will be provided. Refer to league table below for ids of other leagues. Defaults to VCT Americas.|
 | `hl` | string | 'en-US' | Host language/ locale to use when requesting esports data. |
 | `numberOfFutureGames` | integer | `5` | Number of future games to display. |
 | `use24HourTime` | boolean | false | Use 24 hour format (hh:mm) rather than 12 hour format (hh PERIOD) |
