@@ -1,0 +1,23 @@
+/*
+ *
+ * MagicMirror Module: MMM-VALORANTESPORTS-SCHEDULES
+ *
+ * Author: xadamxk
+ * License: MIT
+ *
+ * Styles:
+ */
+
+ .MMM-VALORANTESPORTS-SCHEDULES-table {
+    color: white;
+ }
+
+ .MMM-VALORANTESPORTS-SCHEDULES-table-heading {
+   height: 36px;
+   font-size: 36px;
+}
+
+.MMM-VALORANTESPORTS-SCHEDULES-table-row {
+   height: 24px;
+   font-size: 24px
+}
