@@ -1,5 +1,5 @@
 # MMM-VALORANTESPORTS-SCHEDULES
-An Esports schedule module for a provided Valorant tournament id.
+An Esports schedule module for a provided Valorant league id.
 Module for <a href="https://github.com/MichMich/MagicMirror">MagicMirror</a>.
 
 ## Previews with Configuration Samples
